@@ -10,7 +10,7 @@ module CacheComment
     def read_fragment(key, options)
       unless params[:cache_comments]
         comment = CommentFormatter.new(fragment_cache_key(key), options)
-        super(key, options).gsub(comment.start_regex, '').gsub(comment.end, '')
+        super(key, options) && super(key, options).gsub(comment.start_regex, '').gsub(comment.end, '')
       else
         super key, options
       end
