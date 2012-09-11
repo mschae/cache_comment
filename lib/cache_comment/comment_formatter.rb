@@ -20,7 +20,9 @@ module CacheComment
     end
 
     def start_regex
-      Regexp.new start.gsub(@time.to_s, '.*').gsub((@time + @options[:expires_in]).to_s, '.*')
+      regexp = start.gsub(@time.to_s, '.*')
+      regexp.gsub!((@time + @options[:expires_in]).to_s, '.*') if @options[:expires_in]
+      Regexp.new regexp
     end
 
     def end
