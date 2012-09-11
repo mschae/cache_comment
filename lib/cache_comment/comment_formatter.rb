@@ -3,7 +3,7 @@ module CacheComment
 
     def initialize key, options
       @key     = key
-      @options = options.symbolize_keys
+      @options = (options || {}).symbolize_keys
       @time = Time.now
     end
 
