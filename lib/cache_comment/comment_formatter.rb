@@ -20,13 +20,15 @@ module CacheComment
     end
 
     def start_regex
-      regexp = start.gsub(@time.to_s, '.*')
-      regexp.gsub!((@time + @options[:expires_in]).to_s, '.*') if @options[:expires_in]
-      Regexp.new regexp
+      Regexp.new wrap 'cached .* with key .*( valid until .*)?'
     end
 
     def end
       wrap "end of #{@key}"
+    end
+
+    def end_regex
+      Regexp.new wrap 'end of .*'
     end
 
     def wrap(content)
