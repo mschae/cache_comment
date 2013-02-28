@@ -21,7 +21,7 @@ This is what a cached fragment might look like after using cache comments:
 ### View comments
 Per default comments are being hidden (they are always being stored in the cache though).
 
-To show comments append `?cache_comment=1` to your request.
+To show comments append `?cache_comments=1` to your request.
 
 
 ## ToDos
