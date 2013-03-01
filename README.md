@@ -1,7 +1,7 @@
 # Cache Comments
 
 ## Introduction
-Sometimes it's hard to figure out what fragment has been cached how, when and under which key. Russian Doll caching - as awesome as it is - doesn't help making caches more maintainable. Cache Comments to the resque.
+Sometimes it is hard to figure out what fragment has been cached how, when and under which key. Russian Doll caching - as awesome as it is - does not help making caches more maintainable. Cache Comments to the rescue.
 
 Cache Comments wraps your cached fragment in a set of html comments. The first tells you what you need to know, the second where the current fragment ends.
 
@@ -16,13 +16,8 @@ This is what a cached fragment might look like after using cache comments:
 
 ### Installation
 
-	gem 'cache_comment'
-	
-### View comments
-Per default comments are being hidden (they are always being stored in the cache though).
-
-To show comments append `?cache_comment=1` to your request.
-
+  1. `gem 'cache_comment'`
+  2. Done
 
 ## ToDos
 * Make configurable

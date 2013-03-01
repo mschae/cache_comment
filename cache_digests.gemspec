@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name    = 'cache_comment'
-  s.version = '0.0.1'
+  s.version = File.read('VERSION')
   s.author  = 'Michael Schaefermeyer'
   s.email   = 'michael.schaefermeyer@zweitag.de'
   s.summary = 'HTML comments for every fragment cache block for debugging and freshness validation'
